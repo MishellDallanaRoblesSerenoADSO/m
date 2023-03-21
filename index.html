@@ -11,12 +11,13 @@
 
 
     <div id="app">  
-       <button v-if="array==null" @click="crear">Crear </button>
+       <button v-if="obj==null" @click="crearObjeto">Crear Objeto </button>
        <form v-else>
-        <input type="text">
-        <input type="text">
-        <input type="submit">
-       </form>
+        <input  id="dataInput"  type="text">
+        <button @click.prevent="guardarObjeto"> Guardar</button>
+        <button v-show="(Object.values(obj).length)? true: false">Eliminar</button>
+        <h5> {{obj}}</h5>
+    </form>
     </div>
     
 

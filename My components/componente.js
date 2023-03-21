@@ -2,12 +2,15 @@ export default{
     data(){
         return{
 
-            array:null
+            obj:null
         }
     },
     methods:{
-        crear(){
-            this.array = [];
+        crearObjeto(){
+            this.obj = {};
+        },
+        guardarObjeto (e){
+            this.obj.dato = document.querySelector("#dataInput").value;
         }
     }
 }

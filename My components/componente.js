@@ -1,16 +1,15 @@
 export default{
     data(){
         return{
-
-            obj:null
+            lista:[],
+            dato:null
         }
     },
     methods:{
-        crearObjeto(){
-            this.obj = {};
-        },
-        guardarObjeto (e){
-            this.obj.dato = document.querySelector("#dataInput").value;
+        enviar(){
+            this.lista.push(this.dato),
+            this.dato=null
+            console.log(this.lista)
         }
     }
 }

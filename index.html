@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sp">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,13 +11,12 @@
 
 
     <div id="app">  
-       <button v-if="obj==null" @click="crearObjeto">Crear Objeto </button>
-       <form v-else>
-        <input  id="dataInput"  type="text">
-        <button @click.prevent="guardarObjeto"> Guardar</button>
-        <button v-show="(Object.values(obj).length)? true: false">Eliminar</button>
-        <h5> {{obj}}</h5>
-    </form>
+      <form>
+        <input type="text" v-model="dato">
+        <button @click.prevent="enviar"> Enviar</button>
+      </form>
+    
+      <div v-for="e in lista">{{e}}</div>
     </div>
     
 
